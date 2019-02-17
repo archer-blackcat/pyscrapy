@@ -1,2 +1,2 @@
 # pyscrapy
-My Pythony Scrapper
+My Python Scrapper
