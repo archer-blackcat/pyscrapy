@@ -12,21 +12,23 @@ class DpinfoSpider(CrawlSpider):
     name = 'dpinfo'
     allowed_domains = ['www.dianping.com','s3plus.meituan.net']
 
-    search_word = u'可颂坊'
-    base_url = 'https://www.dianping.com/search/keyword/7/10_'+ search_word
-    start_urls = [base_url]
-
+    search_word='子情贝诺'
+    target_url='https://www.dianping.com/search/keyword/7/10_'
+        
+    base_url = target_url + search_word
+    exPage = LinkExtractor(restrict_xpaths=('//div[@class="page"]/a[@class="next"]'))
     exShop = LinkExtractor(allow=(r'http://www.dianping.com/shop/\d+'),
                            restrict_xpaths=('//div[@class="tit"]/a'))
-
-    page_url = base_url + r'/p\d+'
-    exPage = LinkExtractor(restrict_xpaths=('//div[@class="page"]/a[@class="next"]'))
+    
 
    
     rules = [
         Rule(exShop,callback='parse_shop',follow=False),
-        #Rule(exPage,follow=True),
+        Rule(exPage,follow=True),
         ]
+
+    
+    start_urls = [base_url]
 
         
 

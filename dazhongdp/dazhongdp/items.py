@@ -32,3 +32,16 @@ class DazhongdpItem(scrapy.Item):
 
     pass
 
+class DazhongReviewItem(scrapy.Item):
+
+    shop_name = scrapy.Field()
+
+    review_list = scrapy.Field()
+
+    decrypt_css = scrapy.Field()
+    decrypt_svg = scrapy.Field()
+
+    xys = scrapy.Field()
+    dmap = scrapy.Field()
+    pass
+

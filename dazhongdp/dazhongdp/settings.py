@@ -14,6 +14,7 @@ BOT_NAME = 'dazhongdp'
 SPIDER_MODULES = ['dazhongdp.spiders']
 NEWSPIDER_MODULE = 'dazhongdp.spiders'
 
+LOG_FILE = 'scrapy.log'
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'dazhongdp (+http://www.yourdomain.com)'
@@ -41,9 +42,9 @@ COOKIES_ENABLED = False
 # Override the default request headers:
 DEFAULT_REQUEST_HEADERS = {
    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-   'Accept-Language': 'en',
+   'Upgrade-Insecure-Requests': '1',
    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
-   'Cookie':'cy=7; cye=shenzhen; _lxsdk_cuid=168e6fabf19c8-0ed7e0e8afbd32-58422116-168000-168e6fabf1ac8; _lxsdk=168e6fabf19c8-0ed7e0e8afbd32-58422116-168000-168e6fabf1ac8; _hc.v=b3eba395-ee5a-d2f6-1491-44cc9bfc90ca.1550063419; s_ViewType=10; dper=f4797ecc57cdde3e2056aff65a0930ef0eecdfb13cb94f74161da54f0a34a72a2c45e160527fb6627c58d6bfbef3e912004ae5b45e3c21a0c0c95562204e7d083f80c3320557eab15472436d66aad07ca0d939725cb5d7c387a9836a3ef4a87c; ll=7fd06e815b796be3df069dec7836c3df; ua=%E9%BB%91%E7%8C%AB%E4%B9%8B%E6%9C%AF; ctu=ce557761a21998eb141c943b3dbedc4835384ec3be035785a659594939455ddd'
+   'Cookie':'tencentSig=8422400; __mta=222756516.1529666865758.1529667445978.1550489555886.12; aburl=1; Hm_lvt_dbeeb675516927da776beeb1d9802bd4=1529666693; _hc.v=d0c8e041-96db-62bc-1956-983e0d61c4d3.1529666693; _lxsdk_cuid=164273d6a60c8-090d7c2f837abd-39614807-1fa400-164273d6a60c8; _lxsdk=164273d6a60c8-090d7c2f837abd-39614807-1fa400-164273d6a60c8; cy=7; cye=shenzhen; _qddaz=QD.4xdt24.gdgdka.jipw5wjc; __mta=222756516.1529666865758.1529667436699.1529667445978.11; __utma=1.2030629870.1529667485.1529667485.1529667485.1; s_ViewType=10; ua=%E9%BB%91%E7%8C%AB%E4%B9%8B%E6%9C%AF; ctu=ce557761a21998eb141c943b3dbedc48c002286749ebf04015c3acde49e98cad; _dp.ac.v=8d338aec-e954-43bf-8932-74c0b213cced; dper=782fc523e18cd148d045d26a26a244c45c92846d365c2ab3948d58d237f2627e6716dfe817d517d6123a0e3d39695a363aa28675bfa024f4c923668c92236e36b90d62780746f5783ea90e1c8723d37f39ed8a4fe272e981d9776967eec0dcd5; ll=7fd06e815b796be3df069dec7836c3df; _lx_utm=utm_source%3DBaidu%26utm_medium%3Dorganic'
 }
 
 # Enable or disable spider middlewares
