@@ -12,7 +12,7 @@ class DpinfoSpider(CrawlSpider):
     name = 'dpinfo'
     allowed_domains = ['www.dianping.com','s3plus.meituan.net']
 
-    search_word='子情贝诺'
+    search_word='点都德'
     target_url='https://www.dianping.com/search/keyword/7/10_'
         
     base_url = target_url + search_word

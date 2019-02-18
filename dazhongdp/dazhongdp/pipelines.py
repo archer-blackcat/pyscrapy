@@ -47,7 +47,7 @@ class DazhongdpPipeline(object):
                 result.append(s)
             else:
                 try:
-                    x = round(int(xys[s][0])/14)
+                    x = int(int(xys[s][0])/14)
                     y = int(xys[s][1])
                     for m in dmap.keys():
                         if m == s[:len(m)]:
